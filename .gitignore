@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+/logs/
+/data/
+/workspace/
+/skillopt/gpt5.5_skill.md

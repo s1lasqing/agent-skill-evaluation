@@ -1,0 +1,8 @@
+[dataset]
+package = "../../data/skillret"
+# 本批为固定清单而非随机抽样：前三条复用集成预跑查询，后两条为本次新增。
+# q-00001、q-00002 是 test split 中按 ID 升序的前两条单正例查询；
+# q-00242(k=3)、q-01054(k=2)、q-02592(k=2) 为既有预跑的多正例查询。
+task_ids = ["q-00001", "q-00002", "q-00242", "q-01054", "q-02592"]
+loader = "datasets.skillret:load_tasks"
+prepare = "datasets.skillret:prepare_task"

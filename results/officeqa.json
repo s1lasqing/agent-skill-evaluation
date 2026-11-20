@@ -1,0 +1,224 @@
+[
+  {
+    "run": "officeqa-pro-dsh-pilot",
+    "harness": "dsh",
+    "manifest_status": "error",
+    "planned": 3,
+    "model": "deepseek-flash",
+    "agent_timeout_seconds": 300,
+    "tasks": [
+      {
+        "id": "UID0001",
+        "status": "error",
+        "score": null,
+        "failure": "agent_timeout",
+        "wall_seconds": 304.703,
+        "tool_calls": 37
+      },
+      {
+        "id": "UID0003",
+        "status": "completed",
+        "score": 1.0,
+        "failure": null,
+        "wall_seconds": 101.703,
+        "tool_calls": 13
+      },
+      {
+        "id": "UID0004",
+        "status": "error",
+        "score": null,
+        "failure": "agent_timeout",
+        "wall_seconds": 304.531,
+        "tool_calls": 37
+      }
+    ]
+  },
+  {
+    "run": "officeqa-pro-dsh-skillopt",
+    "harness": "dsh",
+    "manifest_status": "error",
+    "planned": 3,
+    "model": "deepseek-flash",
+    "agent_timeout_seconds": 300,
+    "tasks": [
+      {
+        "id": "UID0001",
+        "status": "completed",
+        "score": 0.0,
+        "failure": null,
+        "wall_seconds": 283.766,
+        "tool_calls": 46
+      },
+      {
+        "id": "UID0003",
+        "status": "completed",
+        "score": 1.0,
+        "failure": null,
+        "wall_seconds": 135.515,
+        "tool_calls": 30
+      },
+      {
+        "id": "UID0004",
+        "status": "error",
+        "score": null,
+        "failure": "agent_timeout",
+        "wall_seconds": 305.266,
+        "tool_calls": 56
+      }
+    ]
+  },
+  {
+    "run": "officeqa-pro-dsh-diagnostic-600s",
+    "harness": "dsh",
+    "manifest_status": "error",
+    "planned": 2,
+    "model": "deepseek-flash",
+    "agent_timeout_seconds": 600,
+    "tasks": [
+      {
+        "id": "UID0001",
+        "status": "error",
+        "score": null,
+        "failure": "agent_timeout",
+        "wall_seconds": 604.578,
+        "tool_calls": 51
+      },
+      {
+        "id": "UID0004",
+        "status": "error",
+        "score": null,
+        "failure": "agent_timeout",
+        "wall_seconds": 604.703,
+        "tool_calls": 65
+      }
+    ]
+  },
+  {
+    "run": "officeqa-pro-openhands-pilot",
+    "harness": "openhands",
+    "manifest_status": "error",
+    "planned": 3,
+    "model": "deepseek/deepseek-flash",
+    "agent_timeout_seconds": 300,
+    "tasks": [
+      {
+        "id": "UID0001",
+        "status": "error",
+        "score": null,
+        "failure": "agent_timeout",
+        "wall_seconds": 336.594,
+        "tool_calls": 22
+      },
+      {
+        "id": "UID0003",
+        "status": "completed",
+        "score": 1.0,
+        "failure": null,
+        "wall_seconds": 294.344,
+        "tool_calls": 26
+      },
+      {
+        "id": "UID0004",
+        "status": "error",
+        "score": null,
+        "failure": "agent_timeout",
+        "wall_seconds": 316.765,
+        "tool_calls": 35
+      }
+    ]
+  },
+  {
+    "run": "officeqa-pro-openhands-pilot-v2",
+    "harness": "openhands",
+    "manifest_status": "error",
+    "planned": 3,
+    "model": "deepseek/deepseek-flash",
+    "agent_timeout_seconds": 300,
+    "tasks": [
+      {
+        "id": "UID0001",
+        "status": "completed",
+        "score": 1.0,
+        "failure": null,
+        "wall_seconds": 287.438,
+        "tool_calls": 71
+      },
+      {
+        "id": "UID0003",
+        "status": "completed",
+        "score": 1.0,
+        "failure": null,
+        "wall_seconds": 84.078,
+        "tool_calls": 18
+      },
+      {
+        "id": "UID0004",
+        "status": "error",
+        "score": null,
+        "failure": "agent_timeout",
+        "wall_seconds": 311.719,
+        "tool_calls": 40
+      }
+    ]
+  },
+  {
+    "run": "officeqa-pro-openhands-pilot-v3",
+    "harness": "openhands",
+    "manifest_status": "running",
+    "planned": 3,
+    "model": "deepseek/deepseek-flash",
+    "agent_timeout_seconds": 300,
+    "tasks": [
+      {
+        "id": "UID0001",
+        "status": "error",
+        "score": null,
+        "failure": "agent_timeout",
+        "wall_seconds": 324.016,
+        "tool_calls": 77
+      },
+      {
+        "id": "UID0003",
+        "status": "completed",
+        "score": 1.0,
+        "failure": null,
+        "wall_seconds": 111.625,
+        "tool_calls": 23
+      },
+      {
+        "id": "UID0004",
+        "status": "running",
+        "score": null,
+        "failure": null,
+        "wall_seconds": null,
+        "tool_calls": null
+      }
+    ]
+  },
+  {
+    "run": "officeqa-pro-openhands-diagnostic-600s",
+    "harness": "openhands",
+    "manifest_status": "completed",
+    "planned": 2,
+    "model": "deepseek/deepseek-flash",
+    "agent_timeout_seconds": 600,
+    "tasks": [
+      {
+        "id": "UID0001",
+        "status": "completed",
+        "score": 1.0,
+        "failure": null,
+        "wall_seconds": 274.938,
+        "tool_calls": 24
+      },
+      {
+        "id": "UID0004",
+        "status": "completed",
+        "score": 0.0,
+        "failure": null,
+        "wall_seconds": 477.312,
+        "tool_calls": 33
+      }
+    ]
+  }
+]

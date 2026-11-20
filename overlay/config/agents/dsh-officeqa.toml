@@ -1,0 +1,19 @@
+[model]
+# 与 config/agents/dsh.toml 共用的团队网关和 DeepSeek Flash 路由。
+provider = "deepseek-official"
+model = "deepseek-flash"
+base_url = "https://example.invalid/v1"
+api_key_env = "DEEPSEEK_API_KEY"
+
+[agent]
+# 保持 dsh 原有 runner、recorder 和费用统计配置。
+runner = "harness.dsh.runner:execute"
+recorder = "agent_session_analyzer:DshRecorder"
+cost_tracking = true
+profile = "sdk-minimal"
+tool_timeout_sec = 120
+max_output_chars = 20000
+# OfficeQA 只给答题工具：容器内终端和只读文件读取。
+tools = ["terminal", "read_file"]
+# 智能体总时限统一为 300 秒（任务侧同样为 300 秒）。
+timeout_sec = 300

@@ -1,0 +1,16 @@
+{
+  "revision": "22c1ed85d20bf09476373c4a1b10965284873e3d",
+  "url": "https://github.com/microsoft/SkillOpt/blob/22c1ed85d20bf09476373c4a1b10965284873e3d/ckpt/officeqa/gpt5.5_skill.md",
+  "sha256": "fc15969126fbc4bc0bb53b654df4984ff748d35965e1ba50af52aebe703aa59e",
+  "officeqa_full_split_membership": {
+    "UID0001": [
+      "val"
+    ],
+    "UID0003": [
+      "test"
+    ],
+    "UID0004": [
+      "test"
+    ]
+  }
+}

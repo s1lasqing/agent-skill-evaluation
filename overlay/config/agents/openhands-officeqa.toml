@@ -1,0 +1,20 @@
+# OfficeQA Pro 专用 OpenHands 配置：与 openhands.toml 共用团队网关、DeepSeek Flash、
+# runner、recorder 和费用统计，只把工具限制为答题所需的两项，并把智能体总时限固定为 300 秒。
+[model]
+model = "deepseek/deepseek-flash"
+base_url = "https://example.invalid/v1"
+api_key_env = "DEEPSEEK_API_KEY"
+timeout = 120
+num_retries = 0
+
+[agent]
+runner = "harness.openhands.runner:execute"
+recorder = "agent_session_analyzer:OpenHandsRecorder"
+cost_tracking = true
+max_iterations = 100
+tool_timeout_sec = 120
+max_output_chars = 20000
+# 答题 agent 只使用容器内终端和只读文件读取，不提供 registry/skill 工具。
+tools = ["terminal", "read_file"]
+# 与 dsh-officeqa.toml 对齐的智能体总时限（任务侧同样为 300 秒）。
+timeout_sec = 300

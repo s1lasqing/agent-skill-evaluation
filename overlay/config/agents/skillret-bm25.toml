@@ -1,0 +1,8 @@
+[model]
+model = "bm25"
+
+[agent]
+runner = "datasets.skillret:execute"
+cost_tracking = false
+tools = []
+top_k = 20

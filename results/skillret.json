@@ -1,0 +1,262 @@
+[
+  {
+    "run": "skillret-week1",
+    "operator": "BM25 dsh",
+    "manifest_status": "completed",
+    "planned": 5,
+    "model": "bm25",
+    "agent_timeout_seconds": null,
+    "tasks": [
+      {
+        "id": "q-00001",
+        "status": "completed",
+        "score": 0.0,
+        "failure": null,
+        "wall_seconds": 8.024,
+        "metrics": {
+          "NDCG@5": 0.0,
+          "Recall@5": 0.0,
+          "MAP@5": 0.0,
+          "Precision@5": 0.0,
+          "Completeness@5": 0.0,
+          "NDCG@10": 0.0,
+          "Recall@10": 0.0,
+          "MAP@10": 0.0,
+          "Precision@10": 0.0,
+          "Completeness@10": 0.0,
+          "NDCG@15": 0.0,
+          "Recall@15": 0.0,
+          "MAP@15": 0.0,
+          "Precision@15": 0.0,
+          "Completeness@15": 0.0
+        }
+      },
+      {
+        "id": "q-00002",
+        "status": "completed",
+        "score": 1.0,
+        "failure": null,
+        "wall_seconds": 0.198,
+        "metrics": {
+          "NDCG@5": 1.0,
+          "Recall@5": 1.0,
+          "MAP@5": 1.0,
+          "Precision@5": 0.2,
+          "Completeness@5": 1.0,
+          "NDCG@10": 1.0,
+          "Recall@10": 1.0,
+          "MAP@10": 1.0,
+          "Precision@10": 0.1,
+          "Completeness@10": 1.0,
+          "NDCG@15": 1.0,
+          "Recall@15": 1.0,
+          "MAP@15": 1.0,
+          "Precision@15": 0.06666666666666667,
+          "Completeness@15": 1.0
+        }
+      },
+      {
+        "id": "q-00242",
+        "status": "completed",
+        "score": 0.46927872602275644,
+        "failure": null,
+        "wall_seconds": 0.175,
+        "metrics": {
+          "NDCG@5": 0.46927872602275644,
+          "Recall@5": 0.3333333333333333,
+          "MAP@5": 0.3333333333333333,
+          "Precision@5": 0.2,
+          "Completeness@5": 0.0,
+          "NDCG@10": 0.46927872602275644,
+          "Recall@10": 0.3333333333333333,
+          "MAP@10": 0.3333333333333333,
+          "Precision@10": 0.1,
+          "Completeness@10": 0.0,
+          "NDCG@15": 0.46927872602275644,
+          "Recall@15": 0.3333333333333333,
+          "MAP@15": 0.3333333333333333,
+          "Precision@15": 0.06666666666666667,
+          "Completeness@15": 0.0
+        }
+      },
+      {
+        "id": "q-01054",
+        "status": "completed",
+        "score": 0.6131471927654584,
+        "failure": null,
+        "wall_seconds": 0.182,
+        "metrics": {
+          "NDCG@5": 0.6131471927654584,
+          "Recall@5": 0.5,
+          "MAP@5": 0.5,
+          "Precision@5": 0.2,
+          "Completeness@5": 0.0,
+          "NDCG@10": 0.6131471927654584,
+          "Recall@10": 0.5,
+          "MAP@10": 0.5,
+          "Precision@10": 0.1,
+          "Completeness@10": 0.0,
+          "NDCG@15": 0.6131471927654584,
+          "Recall@15": 0.5,
+          "MAP@15": 0.5,
+          "Precision@15": 0.06666666666666667,
+          "Completeness@15": 0.0
+        }
+      },
+      {
+        "id": "q-02592",
+        "status": "completed",
+        "score": 0.0,
+        "failure": null,
+        "wall_seconds": 0.203,
+        "metrics": {
+          "NDCG@5": 0.0,
+          "Recall@5": 0.0,
+          "MAP@5": 0.0,
+          "Precision@5": 0.0,
+          "Completeness@5": 0.0,
+          "NDCG@10": 0.0,
+          "Recall@10": 0.0,
+          "MAP@10": 0.0,
+          "Precision@10": 0.0,
+          "Completeness@10": 0.0,
+          "NDCG@15": 0.0,
+          "Recall@15": 0.0,
+          "MAP@15": 0.0,
+          "Precision@15": 0.0,
+          "Completeness@15": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "run": "skillret-week1-openhands",
+    "operator": "BM25 OpenHands",
+    "manifest_status": "completed",
+    "planned": 5,
+    "model": "bm25",
+    "agent_timeout_seconds": null,
+    "tasks": [
+      {
+        "id": "q-00001",
+        "status": "completed",
+        "score": 0.0,
+        "failure": null,
+        "wall_seconds": 6.573,
+        "metrics": {
+          "NDCG@5": 0.0,
+          "Recall@5": 0.0,
+          "MAP@5": 0.0,
+          "Precision@5": 0.0,
+          "Completeness@5": 0.0,
+          "NDCG@10": 0.0,
+          "Recall@10": 0.0,
+          "MAP@10": 0.0,
+          "Precision@10": 0.0,
+          "Completeness@10": 0.0,
+          "NDCG@15": 0.0,
+          "Recall@15": 0.0,
+          "MAP@15": 0.0,
+          "Precision@15": 0.0,
+          "Completeness@15": 0.0
+        }
+      },
+      {
+        "id": "q-00002",
+        "status": "completed",
+        "score": 1.0,
+        "failure": null,
+        "wall_seconds": 0.164,
+        "metrics": {
+          "NDCG@5": 1.0,
+          "Recall@5": 1.0,
+          "MAP@5": 1.0,
+          "Precision@5": 0.2,
+          "Completeness@5": 1.0,
+          "NDCG@10": 1.0,
+          "Recall@10": 1.0,
+          "MAP@10": 1.0,
+          "Precision@10": 0.1,
+          "Completeness@10": 1.0,
+          "NDCG@15": 1.0,
+          "Recall@15": 1.0,
+          "MAP@15": 1.0,
+          "Precision@15": 0.06666666666666667,
+          "Completeness@15": 1.0
+        }
+      },
+      {
+        "id": "q-00242",
+        "status": "completed",
+        "score": 0.46927872602275644,
+        "failure": null,
+        "wall_seconds": 0.175,
+        "metrics": {
+          "NDCG@5": 0.46927872602275644,
+          "Recall@5": 0.3333333333333333,
+          "MAP@5": 0.3333333333333333,
+          "Precision@5": 0.2,
+          "Completeness@5": 0.0,
+          "NDCG@10": 0.46927872602275644,
+          "Recall@10": 0.3333333333333333,
+          "MAP@10": 0.3333333333333333,
+          "Precision@10": 0.1,
+          "Completeness@10": 0.0,
+          "NDCG@15": 0.46927872602275644,
+          "Recall@15": 0.3333333333333333,
+          "MAP@15": 0.3333333333333333,
+          "Precision@15": 0.06666666666666667,
+          "Completeness@15": 0.0
+        }
+      },
+      {
+        "id": "q-01054",
+        "status": "completed",
+        "score": 0.6131471927654584,
+        "failure": null,
+        "wall_seconds": 0.164,
+        "metrics": {
+          "NDCG@5": 0.6131471927654584,
+          "Recall@5": 0.5,
+          "MAP@5": 0.5,
+          "Precision@5": 0.2,
+          "Completeness@5": 0.0,
+          "NDCG@10": 0.6131471927654584,
+          "Recall@10": 0.5,
+          "MAP@10": 0.5,
+          "Precision@10": 0.1,
+          "Completeness@10": 0.0,
+          "NDCG@15": 0.6131471927654584,
+          "Recall@15": 0.5,
+          "MAP@15": 0.5,
+          "Precision@15": 0.06666666666666667,
+          "Completeness@15": 0.0
+        }
+      },
+      {
+        "id": "q-02592",
+        "status": "completed",
+        "score": 0.0,
+        "failure": null,
+        "wall_seconds": 0.163,
+        "metrics": {
+          "NDCG@5": 0.0,
+          "Recall@5": 0.0,
+          "MAP@5": 0.0,
+          "Precision@5": 0.0,
+          "Completeness@5": 0.0,
+          "NDCG@10": 0.0,
+          "Recall@10": 0.0,
+          "MAP@10": 0.0,
+          "Precision@10": 0.0,
+          "Completeness@10": 0.0,
+          "NDCG@15": 0.0,
+          "Recall@15": 0.0,
+          "MAP@15": 0.0,
+          "Precision@15": 0.0,
+          "Completeness@15": 0.0
+        }
+      }
+    ]
+  }
+]

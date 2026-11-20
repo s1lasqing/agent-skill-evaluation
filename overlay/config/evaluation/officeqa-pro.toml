@@ -1,0 +1,7 @@
+output_dir = "../../logs/exp"
+conditions = ["full-corpus-txt"]
+repeats = 1
+pass_threshold = 1.0
+
+[evaluator]
+function = "datasets.officeqa:evaluate"

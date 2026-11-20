@@ -1,0 +1,7 @@
+[dataset]
+package = "../../data/officeqa"
+# 按 uid 字符串排序后的前三条，固定清单；第一条用于单题 smoke。
+task_ids = ["UID0001", "UID0003", "UID0004"]
+loader = "datasets.officeqa:load_tasks"
+prepare = "datasets.officeqa:prepare_task"
+setup = "datasets.officeqa:setup_environment"

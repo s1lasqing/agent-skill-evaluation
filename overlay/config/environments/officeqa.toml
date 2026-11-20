@@ -1,0 +1,8 @@
+[environment]
+factory = "environment.officeqa:create_environment"
+image = "python:3.12-slim"
+memory = "1g"
+pids_limit = 256
+default_timeout = 300
+startup_timeout = 180
+cleanup_timeout = 60

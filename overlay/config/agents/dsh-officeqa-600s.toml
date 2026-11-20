@@ -1,0 +1,17 @@
+[model]
+# 诊断用配置：与 dsh-officeqa.toml 相同，仅把智能体总时限放宽到 600 秒。
+# 正式条件仍是 300 秒；这份配置只用于判断超时是否仅由预算造成，不用于跨 harness 比较。
+provider = "deepseek-official"
+model = "deepseek-flash"
+base_url = "https://example.invalid/v1"
+api_key_env = "DEEPSEEK_API_KEY"
+
+[agent]
+runner = "harness.dsh.runner:execute"
+recorder = "agent_session_analyzer:DshRecorder"
+cost_tracking = true
+profile = "sdk-minimal"
+tool_timeout_sec = 120
+max_output_chars = 20000
+tools = ["terminal", "read_file"]
+timeout_sec = 600

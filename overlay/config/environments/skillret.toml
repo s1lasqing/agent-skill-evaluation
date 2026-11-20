@@ -1,0 +1,2 @@
+[environment]
+factory = "datasets.skillret:create_environment"

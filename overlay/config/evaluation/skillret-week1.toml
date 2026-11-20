@@ -1,0 +1,7 @@
+output_dir = "../../logs/exp"
+conditions = ["full-text"]
+repeats = 1
+pass_threshold = 1.0
+
+[evaluator]
+function = "datasets.skillret:evaluate"
