@@ -1,5 +1,7 @@
 # 复现步骤
 
+Spring/Eureka 技能注册、执行和压测使用独立 Maven 工程，步骤见 [Spring Skill Lab](../skill-lab/README.md)。下文适用于 SkillRet 检索和 OfficeQA。
+
 以下命令从同一父目录中的仓库运行，假设本项目目录名为 agent-skill-evaluation。准备 Git、Python 3.12、uv，以及在运行 OfficeQA 时可访问的 Docker Desktop Linux 引擎。
 
 ~~~powershell

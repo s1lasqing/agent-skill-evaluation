@@ -1,0 +1,37 @@
+name: rsi-skill-lab
+x-skill-service: &skill-service
+  image: rsi-skill-lab:local
+  pull_policy: never
+  environment:
+    SERVER_ADDRESS: 0.0.0.0
+  mem_limit: 768m
+services:
+  eureka:
+    <<: *skill-service
+    build: .
+    command: [--spring.profiles.active=eureka]
+    ports: ["127.0.0.1:18761:18761"]
+  registry:
+    <<: *skill-service
+    depends_on: [eureka]
+    command:
+      - --spring.profiles.active=registry
+      - --eureka.instance.hostname=registry
+      - --eureka.client.service-url.defaultZone=http://eureka:18761/eureka/
+    ports: ["127.0.0.1:18881:18881"]
+  worker:
+    <<: *skill-service
+    depends_on: [eureka]
+    command:
+      - --spring.profiles.active=worker
+      - --eureka.instance.hostname=worker
+      - --eureka.client.service-url.defaultZone=http://eureka:18761/eureka/
+    ports: ["127.0.0.1:18882:18882"]
+  flow:
+    <<: *skill-service
+    depends_on: [registry, worker]
+    command:
+      - --spring.profiles.active=flow
+      - --eureka.instance.hostname=flow
+      - --eureka.client.service-url.defaultZone=http://eureka:18761/eureka/
+    ports: ["127.0.0.1:18883:18883"]

@@ -1,0 +1,71 @@
+{
+  "finished_at": "2026-11-20T10:27:52+08:00",
+  "source_skill": {
+    "id": "76d3bc58-1295-44b4-ac92-30295cac13c3",
+    "name": "text-cleanup",
+    "url": "https://github.com/majiayu000/claude-skill-registry/tree/main/skills/data/text-cleanup",
+    "license_label": "mit",
+    "original_sha256": "dea6aa8cee0f8ab8dfd8f8349a10245666600bcd0cea59bb732633603765d0c8",
+    "runtime_scope": "Deterministic implementation of selected opening filler rules and whitespace normalization."
+  },
+  "eureka": {
+    "SKILL-REGISTRY": [
+      "UP"
+    ],
+    "SKILL-WORKER": [
+      "UP"
+    ],
+    "SKILL-FLOW": [
+      "UP"
+    ]
+  },
+  "smoke": {
+    "registered": 50,
+    "checked_chain_length": 50,
+    "dataset_call_ms": 208.85,
+    "chain_ms": 452.5
+  },
+  "hot_reload": {
+    "cycles": 60,
+    "background_concurrency": 8,
+    "successful_background_calls": 58899,
+    "errors": 0,
+    "expected_missing_404": 60,
+    "duration_s": 60.01,
+    "flow_latency": {
+      "p50_ms": 6.88,
+      "p95_ms": 17.71,
+      "p99_ms": 27.67
+    },
+    "add_plus_delete_latency": {
+      "p50_ms": 7.26,
+      "p95_ms": 26.88,
+      "p99_ms": 34.36
+    }
+  },
+  "capacity": {
+    "registered": 100000,
+    "configured_limit": 100000,
+    "overflow_http": 409,
+    "load_s": 3.02,
+    "batch_latency": {
+      "p50_ms": 29.7,
+      "p95_ms": 61.42,
+      "p99_ms": 108.47
+    },
+    "chain_ms_at_limit": 138.1,
+    "successful_calls_at_limit": 1000,
+    "checked_capacity_fixture_skills": [
+      "load-000050",
+      "load-050025",
+      "load-099999"
+    ],
+    "flow_latency_at_limit": {
+      "p50_ms": 7.32,
+      "p95_ms": 22.19,
+      "p99_ms": 30.03
+    }
+  },
+  "same_registry_instance": true,
+  "final_health": "UP"
+}

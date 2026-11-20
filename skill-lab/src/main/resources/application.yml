@@ -1,0 +1,66 @@
+server:
+  address: 127.0.0.1
+spring:
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connectTimeout: 2000
+            readTimeout: 5000
+    loadbalancer:
+      cache:
+        enabled: false
+eureka:
+  client:
+    jersey:
+      enabled: false
+    service-url:
+      defaultZone: http://127.0.0.1:18761/eureka/
+    registry-fetch-interval-seconds: 3
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 5
+---
+spring:
+  config:
+    activate:
+      on-profile: eureka
+  application:
+    name: skill-eureka
+server:
+  port: 18761
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    use-read-only-response-cache: false
+    wait-time-in-ms-when-sync-empty: 0
+---
+spring:
+  config:
+    activate:
+      on-profile: registry
+  application:
+    name: skill-registry
+server:
+  port: 18881
+---
+spring:
+  config:
+    activate:
+      on-profile: worker
+  application:
+    name: skill-worker
+server:
+  port: 18882
+---
+spring:
+  config:
+    activate:
+      on-profile: flow
+  application:
+    name: skill-flow
+server:
+  port: 18883

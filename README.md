@@ -1,6 +1,6 @@
-# Agent Skill Evaluation · SkillRet / OfficeQA
+# Agent Skill Evaluation · SkillRet / OfficeQA / Spring Skill Lab
 
-这个项目基于 [research](https://github.com/LDlornd/research) 探索两个问题：能否从大型技能库检索到合适的技能，以及给作答智能体提供一份技能后，能否按时提交正确答案。仓库保留实验适配、四类 TOML 配置、复跑入口和可公开的结果。原框架作为固定版本的上游依赖。
+这个项目记录三组技能实验。SkillRet 基于 [research](https://github.com/LDlornd/research) 评估技能检索，OfficeQA 比较两个 harness 及固定技能对作答的影响，Spring Skill Lab 验证技能注册容量、Feign 串联和动态加载卸载。仓库包含基线代码、运行配置、复跑入口和结果分析。
 
 ## 实验结果
 
@@ -30,6 +30,19 @@
 
 补充记录独立于主对照。600 秒诊断中，dsh 两题均超时，OpenHands 一题得 1、一题得 0。OpenHands 的 300 秒 v2 重跑为两题答对、一题超时；v3 的末题仍标记为运行中，属于未完整收尾的批次。[所有记录及耗时](results/officeqa.json)
 
+### Spring Skill Lab · 注册、串联与动态加载
+
+在 Docker 中运行 Eureka、Registry、Worker 和 Flow。Flow 通过 Feign 按服务名查找技能定义和调用执行服务。初始流程包含 1 个从 SkillRet 适配的 `text-cleanup` 和 49 个合成技能，50 步顺序执行的完整输出已校验。
+
+| 指标 | 第二轮实测 |
+| --- | --- |
+| 注册容量 | 达到配置上限 100,000 条，额外注册返回 HTTP 409 |
+| 动态加载与卸载 | 60 轮通过，卸载后 60 次新调用均返回预期的 HTTP 404 |
+| 并发与稳定性 | 8 路并发运行 60.01 秒，58,899 次两技能调用成功，意外错误 0，P95 17.71 ms |
+| 满载执行 | 50 步调用链通过，另有 1,000 次两技能调用全部通过，P95 22.19 ms |
+
+容量数据适用于本机 Docker 上的单实例内存注册中心和轻量定义。实验模块独立运行，原 RSI 流程引擎的节点适配和长期稳定性仍待验证。[基线代码与复跑](skill-lab/) · [结果分析报告](docs/spring-skill-lab-report.md) · [原始指标](results/spring-skill-lab.json)
+
 ## 文件结构
 
 | 路径 | 用途 |
@@ -38,7 +51,8 @@
 | [overlay/config](overlay/config) | 按数据集、环境、执行器和评分拆分 TOML |
 | [patches](patches) | 支持无凭据 BM25 执行器的最小上游补丁和锁文件 |
 | [scripts](scripts) | 安装覆盖文件、下载数据及技能、复跑 SkillOpt 对照 |
-| [results](results) | 从原始 trial 提取的逐题状态、分数、耗时和工具计数 |
-| [docs/reproduce.md](docs/reproduce.md) | Windows PowerShell 复现步骤 |
+| [skill-lab](skill-lab) | Spring/Eureka/Feign 基线源码、Docker Compose 和压测脚本 |
+| [results](results) | 检索和问答逐题结果、Spring 注册容量与稳定性指标 |
+| [docs/reproduce.md](docs/reproduce.md) | SkillRet、OfficeQA 和 Spring 实验复现入口 |
 
 OfficeQA 数据、答案和完整 trace 保存在实验机器。公开结果仅含题号、状态与指标。评分器从 Databricks 上游获取；SkillOpt 文本通过固定提交下载。模型服务地址按本地授权配置。[数据来源和版本](docs/sources.md)
