@@ -1,4 +1,4 @@
-# 培养训练三 · Spring Skill 注册与运行实验
+# Spring Skill 注册与运行实验
 
 实验日期 2026-11-20。原仓库提交 `11b418d3068343d0430e46a58650f97d189159d5`。[rsi-flow-spring-boot](https://github.com/ymxiong/rsi-flow-spring-boot)
 
